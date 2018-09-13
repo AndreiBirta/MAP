@@ -14,11 +14,10 @@ namespace MAPwClient.WebApiCommunication
         private HttpClient client;
         public WebApiConnection()
         {
-            client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:60792");
+            client = new HttpClient {BaseAddress = new Uri("http://localhost:60792")};
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
-
+        /*
         public async void GetUser(string username, string password)
         {
             try
@@ -31,6 +30,6 @@ namespace MAPwClient.WebApiCommunication
             {
 
             }
-        }
+        }*/
     }
 }
